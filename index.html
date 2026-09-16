@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arafat Khan — Web Developer & AI Enthusiast</title>
+  <meta name="description" content="Portfolio of Arafat Khan — Web Developer & AI Enthusiast from Dhaka, Bangladesh. Live projects, GitHub analysis & open source work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============ PROGRESS / SCROLL BAR ============ -->
+  <div id="scrollProgress"></div>
+
+  <!-- ============ CURSOR GLOW ============ -->
+  <div id="cursorGlow"></div>
+
+  <!-- ============ PARTICLES CANVAS ============ -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#home" class="logo">
+        <span class="logo-mark">A</span>
+        <span class="logo-text">arafat<span class="accent">.dev</span></span>
+      </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#live">Live Sites</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+        <a href="https://github.com/arafatkhan" target="_blank" class="nav-cta" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      </nav>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="glow orb-glow-1"></div>
+      <div class="glow orb-glow-2"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-visual" id="heroVisual">
+        <!-- floating code card -->
+        <div class="float-card float-card-code">
+          <i class="fab fa-github"></i>
+          <span>arafatkhan</span>
+          <small>44 repos · open source</small>
+          <div class="code-lines"><i></i><i></i><i></i></div>
+        </div>
+        <!-- floating live-site card -->
+        <div class="float-card float-card-live">
+          <i class="fas fa-globe"></i>
+          <span>Live Sites</span>
+          <small>22 hosted on GitHub Pages</small>
+        </div>
+        <!-- avatar ring -->
+        <div class="avatar-ring">
+          <div class="avatar-core">
+            <img src="https://avatars.githubusercontent.com/u/7759504?v=4" alt="Arafat Khan" />
+          </div>
+        </div>
+        <!-- floating stack card -->
+        <div class="float-card float-card-stack">
+          <span class="badge">&lt;/&gt;</span>
+          <span>Full-Stack</span>
+          <small>HTML · Python · PHP · JS</small>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="hero-eyebrow"><span class="live-dot"></span> Available for freelance &amp; collaboration</p>
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text" id="typedName">Arafat Khan</span><span class="blink">|</span>
+        </h1>
+        <p class="hero-subtitle">
+          <span class="rotate-text" id="rotator"></span>
+        </p>
+        <div class="hero-metrics">
+          <div class="metric" data-to="44"><h4><span class="num" id="mRepos">0</span>+</h4><p>Repositories</p></div>
+          <div class="metric" data-to="22"><h4><span class="num" id="mLive">0</span></h4><p>Live Sites</p></div>
+          <div class="metric" data-to="6"><h4><span class="num" id="mLang">0</span></h4><p>Languages</p></div>
+          <div class="metric" data-to="300"><h4><span class="roman" id="mCommits">0</span>+</h4><p>Commits</p></div>
+        </div>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View My Work <i class="fas fa-arrow-right"></i></a>
+          <a href="https://github.com/arafatkhan" target="_blank" class="btn btn-gh"><i class="fab fa-github"></i> GitHub</a>
+        </div>
+        <div class="hero-socials">
+          <a href="https://github.com/arafatkhan" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://arafatkhan.github.io/Arafat/" target="_blank" aria-label="Website"><i class="fas fa-globe"></i></a>
+          <a href="https://khan-web-services.vercel.app/about" target="_blank" aria-label="Company"><i class="fas fa-briefcase"></i></a>
+          <a href="#" data-whatsapp aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Scroll down"><i class="fas fa-chevron-down"></i></a>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-head">
+      <p class="section-tag">01 · Who I am</p>
+      <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+      <p class="section-desc">A passionate web developer turning ideas into living, breathing experiences.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card about-card-bio">
+        <div class="about-avatar">
+          <img src="https://avatars.githubusercontent.com/u/7759504?v=4" alt="Arafat" />
+          <span class="online-badge"><i class="fas fa-check-circle"></i> Available</span>
+        </div>
+        <h3>Arafat Khan</h3>
+        <p class="about-role"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</p>
+        <blockquote>
+          <i class="fas fa-quote-left"></i>
+          I build websites that solve real problems — from doctor directories to legal firm platforms and full e-commerce experiences.
+        </blockquote>
+        <a href="https://khan-web-services.vercel.app/about" target="_blank" class="chip"><i class="fas fa-briefcase"></i> Khan Web Services</a>
+      </div>
+
+      <div class="about-card about-card-work">
+        <h4><i class="fas fa-laptop-code"></i> What I do</h4>
+        <ul class="work-list">
+          <li><i class="fas fa-code"></i><div><strong>Web Development</strong><span>Responsive & modern sites with clean code</span></div></li>
+          <li><i class="fab fa-python"></i><div><strong>Backend & Python</strong><span>Django, Flask &amp; PostgreSQL apps</span></div></li>
+          <li><i class="fab fa-php"></i><div><strong>PHP & MVC</strong><span>Custom MVC frameworks &amp; OOP solutions</span></div></li>
+          <li><i class="fas fa-brain"></i><div><strong>AI Enthusiast</strong><span>Exploring applied AI &amp; automation</span></div></li>
+        </ul>
+      </div>
+
+      <div class="about-card about-card-stats">
+        <h4><i class="fas fa-chart-line"></i> Open Source</h4>
+        <div class="stat-row"><span>Public Repos</span><b>44</b></div>
+        <div class="stat-row"><span>Live Pages</span><b>22</b></div>
+        <div class="stat-row"><span>Languages</span><b>6</b></div>
+        <div class="stat-row"><span>Followers</span><b>7</b></div>
+        <div class="stat-row"><span>Following</span><b>18</b></div>
+        <div class="stat-row"><span>Hireable</span><b><span class="yes-badge"><i class="fas fa-check"></i> YES</span></b></div>
+        <a href="https://github.com/arafatkhan" target="_blank" class="btn btn-gh btn-sm"><i class="fab fa-github"></i> Follow on GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="section-head">
+      <p class="section-tag">02 · Selected Work</p>
+      <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+      <p class="section-desc">Real projects from my GitHub, analyzed &amp; hand-picked across the stack.</p>
+    </div>
+
+    <div class="filter-bar" id="projectFilter">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="web">Web</button>
+      <button data-filter="python">Python</button>
+      <button data-filter="php">PHP</button>
+      <button data-filter="js">JavaScript</button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid">
+      <!-- filled by script.js from live data -->
+    </div>
+
+    <a href="https://github.com/arafatkhan?tab=repositories" target="_blank" class="btn btn-outline center-btn">View All 44 Repos <i class="fas fa-arrow-right"></i></a>
+  </section>
+
+  <!-- ============ LIVE SITES ============ -->
+  <section class="live" id="live">
+    <div class="section-head">
+      <p class="section-tag">03 · Deployed &amp; Live</p>
+      <h2 class="section-title">Live <span class="gradient-text">Sites</span></h2>
+      <p class="section-desc">22+ projects deployed on GitHub Pages — click any one to visit.</p>
+    </div>
+
+    <div class="live-strip" id="liveStrip">
+      <!-- live cards from script.js -->
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <div class="section-head">
+      <p class="section-tag">04 · Tech Stack</p>
+      <h2 class="section-title">Skills &amp; <span class="gradient-text">Tools</span></h2>
+      <p class="section-desc">The languages &amp; tools I ship with, measured by real GitHub activity.</p>
+    </div>
+
+    <div class="skills-grid" id="skillsGrid">
+      <!-- filled by script.js -->
+    </div>
+
+    <div class="tools-cloud">
+      <h4><i class="fas fa-toolbox"></i> Tools &amp; Platforms</h4>
+      <div class="cloud-tags">
+        <span>Git &amp; GitHub</span><span>GitHub Pages</span><span>Django</span><span>Flask</span>
+        <span>PostgreSQL</span><span>PHP</span><span>MVC</span><span>Bootstrap</span>
+        <span>Tailwind CSS</span><span>JavaScript</span><span>REST API</span><span>Vercel</span>
+        <span>WordPress</span><span>Responsive Design</span><span>JSON</span><span>Git CLI</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CALL TO ACTION ============ -->
+  <section class="cta">
+    <div class="cta-glow"></div>
+    <div class="cta-content">
+      <h2>Let's build something <span class="gradient-text">great</span> together</h2>
+      <p>Have a project in mind? I'm ready to turn it into reality.</p>
+      <a href="#" data-whatsapp class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+      <a href="https://github.com/arafatkhan" target="_blank" class="btn btn-gh"><i class="fab fa-github"></i> GitHub</a>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-head">
+      <p class="section-tag">05 · Get In Touch</p>
+      <h2 class="section-title">Contact <span class="gradient-text">Me</span></h2>
+      <p class="section-desc">Let's connect — I usually reply fast.</p>
+    </div>
+
+    <div class="contact-grid">
+      <div class="contact-info">
+        <a href="https://github.com/arafatkhan" target="_blank" class="contact-item"><i class="fab fa-github"></i><div><h4>GitHub</h4><p>github.com/arafatkhan</p></div></a>
+        <a href="https://arafatkhan.github.io/Arafat/" target="_blank" class="contact-item"><i class="fas fa-globe"></i><div><h4>Website / Blog</h4><p>arafatkhan.github.io/Arafat</p></div></a>
+        <a href="https://khan-web-services.vercel.app/about" target="_blank" class="contact-item"><i class="fas fa-briefcase"></i><div><h4>Company</h4><p>Khan Web Services</p></div></a>
+        <a href="#" data-whatsapp class="contact-item"><i class="fab fa-whatsapp"></i><div><h4>WhatsApp</h4><p>Chat with me</p></div></a>
+      </div>
+
+      <form class="contact-form" onsubmit="return handleSubmit(event)">
+        <input type="text" placeholder="Your Name" required aria-label="Your Name" />
+        <input type="email" placeholder="Your Email" required aria-label="Your Email" />
+        <textarea rows="4" placeholder="Type your message..." required aria-label="Message"></textarea>
+        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <span class="logo-mark">A</span>
+        <p>Crafted with <span class="heart">❤</span> by Arafat Khan</p>
+      </div>
+      <div class="footer-links">
+        <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a><a href="#live">Live</a><a href="#contact">Contact</a>
+      </div>
+      <div class="footer-socials">
+        <a href="https://github.com/arafatkhan" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://arafatkhan.github.io/Arafat/" target="_blank" aria-label="Blog"><i class="fas fa-globe"></i></a>
+        <a href="#" data-whatsapp aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+    <p class="footer-copy">© <span id="year"></span> Arafat Khan · Built with <span class="gradient-text">&lt;code&gt;</span> &amp; coffee</p>
+  </footer>
+
+  <!-- ============ WHATSAPP FLOATING BUTTON ============ -->
+  <a href="#" data-whatsapp class="whatsapp-float" id="whatsappFloat" aria-label="Chat on WhatsApp">
+    <span class="wa-ping"></span>
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat with me</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
