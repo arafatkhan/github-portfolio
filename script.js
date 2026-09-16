@@ -312,10 +312,22 @@ renderSkills();
    ===================================================== */
 function initReveal() {
   const els = document.querySelectorAll(".reveal, .about-card, .project-card, .live-card, .skill-card, .contact-item");
+  const alreadyVisible = (el) => el.offsetParent !== null && el.getBoundingClientRect().top < innerHeight && el.getBoundingClientRect().bottom > 0;
+  // Reveal anything already in the viewport immediately + mark the rest.
+  [...els].forEach((el) => {
+    el.classList.add("reveal");
+    if (alreadyVisible(el)) el.classList.add("visible");
+  });
   const obs = new IntersectionObserver((entries) => entries.forEach((en) => {
     if (en.isIntersecting) { en.target.classList.add("visible"); obs.unobserve(en.target); }
-  }), { threshold: 0.12 });
-  els.forEach((el) => { el.classList.add("reveal"); obs.observe(el); });
+  }), { threshold: 0, rootMargin: "0px 0px -24px 0px" });
+  els.forEach((el) => obs.observe(el));
+  // Safety fallback: once the page settles, force-remove hidden state so nothing stays invisible.
+  setInterval(() => {
+    [...document.querySelectorAll(".reveal:not(.visible)")].forEach((el) => {
+      if (alreadyVisible(el)) el.classList.add("visible");
+    });
+  }, 350);
 }
 initReveal();
 

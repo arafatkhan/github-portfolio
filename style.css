@@ -204,7 +204,17 @@ body {
 .blink { animation: blink 1s step-end infinite; color: var(--primary-3); font-weight: 400; }
 
 .hero-subtitle { font-size: 1.15rem; color: var(--text-dim); min-height: 1.4em; margin-bottom: 1.8rem; }
-.rotate-text { color: var(--primary-3); font-weight: 600; }
+.rotate-text {
+  display: inline-block;
+  /* reserve enough width for the longest role so typing never resizes layout */
+  min-width: 16em;
+  white-space: nowrap;
+  overflow: hidden;
+  vertical-align: baseline;
+  color: var(--primary-3);
+  font-weight: 600;
+  text-align: left;
+}
 
 .hero-metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem; margin-bottom: 1.8rem; }
 .metric {
